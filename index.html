@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="app.js">
 </head>
 <body>
     <div class="form">
 <form name = "mf">
-    <input type="text" name="result">
-    <input type="button" value="AC" class="ac" onclick="mf.result.value = ' ' ">
-    <input type="button" value="DEL" class="or" onclick="mf.result.value = ' ' ">
+    <input type="text" id="calculator_input" name="result">
+    <input type="button" value="AC" class="ac" onclick="mf.result.value = ' '">
+    <button class="delete" id="delete"> DEL</button>
+    <!-- <input type="button" value="DEL" class="delete" id="delete"> -->
+    <!-- <input type="button" value="DEL" class="or" id="delete" onclick="mf.result.value = ' ' "> -->
     <input type="button" value="/" class="or" onclick="mf.result.value += '/' ">
     <input type="button" value="7" class="n" onclick="mf.result.value += '7' ">
     <input type="button" value="8" class="n" onclick="mf.result.value += '8' ">
@@ -30,10 +31,15 @@
     <input type="button" value="0" class="n z" onclick="mf.result.value += '0' ">
     <input type="button" value="." class="n" onclick="mf.result.value += '.' ">
     <input type="button" value="=" class="or" onclick="mf.result.value = eval(mf.result.value) ">
-    <button>Switch Theme</button>
+   
+    <!-- <button id="change-section">Switch Theme</button> -->
+    <button id="switch-theme">Switch Theme</button>
+
 
 
 </form>
     </div>
+
+    <script src="./app.js"></script>
 </body>
 </html>
